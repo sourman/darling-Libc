@@ -131,6 +131,8 @@ posix_spawnp(pid_t * __restrict pid, const char * __restrict file,
 		path_buf[lp + ln + 1] = '\0';
 
 retry:		err = posix_spawn(pid, bp, file_actions, attrp, argv, envp);
+		if (err == 0)
+			goto done;
 		switch (err) {
 		case E2BIG:
 		case ENOMEM:

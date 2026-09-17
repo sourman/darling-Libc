@@ -17,6 +17,7 @@ set(gen_sources
 	errlst.c
 	filesec.c
 	fts.c
+	getentropy.c
 	get_compat.c
 	getloadavg.c
 	getttyent.c

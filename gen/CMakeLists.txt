@@ -153,6 +153,8 @@ SET_SOURCE_FILES_PROPERTIES(FreeBSD/waitpid.c PROPERTIES COMPILE_FLAGS "${CMAKE_
 
 set(gen_sources ${gen_sources}
 	NetBSD/utmpx.c
+	comet_compat.c
+	comet_bz2_stubs.c
 )
 
 add_darling_object_library(libc-gen ${gen_sources})
